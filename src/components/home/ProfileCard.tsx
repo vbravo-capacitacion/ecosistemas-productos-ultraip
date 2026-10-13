@@ -6,12 +6,12 @@ const CARD_DETAILS = [
   { label: "Experiencia", value: "25 años" },
   {
     label: "Objetivo",
-    value: "Brindar soluciones de seguridad urbana pública y privada",
+    value: "Construir soluciones de seguridad urgana tanto pública como privada",
   },
 ] as const;
 
-/* const CARD_CTA = "Escribinos"; */
-const CONTACT_HREF = "/contacto";
+/* const CARD_CTA = "Escribinos";
+const CONTACT_HREF = "/contacto"; */
 
 export function ProfileCard() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -25,10 +25,10 @@ export function ProfileCard() {
 
   return (
     <div className="relative mx-auto w-full max-w-[340px] pb-9 pt-24 min-[860px]:mt-3">
-      <p className="absolute right-0 top-12 rotate-[7deg] font-hand text-2xl text-brand">
+      <p className="absolute right-0 top-12 rotate-[3deg] font-hand text-4xl text-brand">
         conocé Danaide
       </p>
-      <p className="absolute -right-2 bottom-6 rotate-[-8deg] font-hand text-2xl text-brand">
+      <p className="absolute -right-2 bottom-6 rotate-[-8deg] font-hand text-4xl text-brand z-[9999]">
         ¡Gira esta tarjeta!
       </p>
       <div className="absolute left-1/2 top-0 h-24 w-[3px] -translate-x-1/2 bg-ink" aria-hidden />
@@ -45,7 +45,10 @@ export function ProfileCard() {
         >
           <div className="absolute inset-0 flex flex-col items-center justify-center rounded-[1.75rem] border-[8px] border-white bg-paper p-8 text-center shadow-soft backface-hidden">
             <div className="flex h-full w-full flex-col items-center justify-center rounded-[1.2rem] border border-ink/5">
-              <span className="text-3xl font-bold tracking-[-0.07em]">Danaide - Ultra IP</span>
+              <span className="flex items-center gap-3">
+                <img className="h-10 w-auto" src="./danaide.png" alt="Danaide" />
+                <img className="h-10 w-auto" src="./uip-1.png" alt="UltraIP" />
+              </span>
               <div className="mt-10 flex items-center gap-3">
                 <Sparkles aria-hidden="true" size={18} strokeWidth={1.7} />
                 <span className="text-xl font-medium tracking-tight">Bienvenidos</span>
@@ -64,14 +67,14 @@ export function ProfileCard() {
                 </div>
               ))}
             </div>
-            <a
+            {/* <a
               href={CONTACT_HREF}
               onClick={(event) => event.stopPropagation()}
               onKeyDown={(event) => event.stopPropagation()}
               className="mt-5 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
-              {/*   {CARD_CTA} */}
-            </a>
+                 {CARD_CTA} 
+            </a>*/}
           </div>
         </div>
       </div>

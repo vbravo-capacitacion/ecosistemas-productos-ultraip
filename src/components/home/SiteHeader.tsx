@@ -14,7 +14,10 @@ export function SiteHeader() {
         aria-label={BRAND_NAME}
         className="inline-flex min-h-10 items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
       >
-        <span className="text-lg font-bold tracking-tight">{BRAND_NAME}</span>
+        <span className="flex items-center gap-3" aria-label={BRAND_NAME}>
+          <img className="h-7 w-auto" src="./danaide.png" alt="Danaide" />
+          <img className="h-7 w-auto" src="./uip-1.png" alt="UltraIP" />
+        </span>
       </a>
 
       <nav aria-label="Navegación principal" className="flex flex-wrap gap-2">

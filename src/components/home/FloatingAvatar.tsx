@@ -12,7 +12,7 @@ export function FloatingAvatar() {
     >
       <div className="flex h-full w-full items-center justify-center rounded-full bg-brand text-ink">
         <span aria-hidden="true" className="relative -mt-1 text-xl tracking-[0.2em]">
-          ·ᴗ·
+          <img className="w-auto h-6 object-cover" src="/uip-1.png" alt="Ultra IP" />
         </span>
       </div>
     </div>
