@@ -61,7 +61,7 @@ function Registration() {
       subtitle={PAGE_SUBTITLE}
       wide
     >
-      <form onSubmit={submit} className="space-y-4" noValidate>
+      <form onSubmit={submit} className="flex flex-col gap-y-[30px] mt-[10px]" noValidate>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label htmlFor="nombre" className="mb-1.5 block text-sm font-medium text-foreground">
@@ -123,7 +123,7 @@ function Registration() {
 
         <button
           type="submit"
-          className="glow-primary mt-2 w-full rounded-xl bg-primary px-6 py-3.5 font-semibold text-primary-foreground transition-transform duration-150 hover:scale-[1.01] active:scale-[0.99]"
+          className="glow-primary mt-2 w-full rounded-xl px-6 py-3.5 font-semibold text-primary-foreground transition-transform duration-150 hover:scale-[1.01] active:scale-[0.99]" style={{ backgroundColor: "var(--color-brand)" }}
         >
           {CONTINUE_LABEL}
         </button>

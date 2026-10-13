@@ -23,9 +23,8 @@ export function StepShell({ step, kicker, title, subtitle, children, wide = true
   return (
     <div className="surface-grid min-h-screen bg-background">
       <div
-        className={`mx-auto flex min-h-screen w-full ${
-          wide ? "max-w-[80rem]" : "max-w-2xl"
-        } flex-col px-5 py-6 sm:px-8`}
+        className={`mx-auto flex min-h-screen w-full ${wide ? "max-w-[80rem]" : "max-w-2xl"
+          } flex-col px-5 py-6 sm:px-8`}
       >
         <header className="mb-8">
           <div className="mb-3 flex items-center justify-between">
@@ -46,9 +45,8 @@ export function StepShell({ step, kicker, title, subtitle, children, wide = true
             {STEPS.map((s, i) => (
               <span
                 key={s.path}
-                className={`font-mono-display text-[10px] tracking-wide uppercase ${
-                  i <= step ? "text-primary" : "text-muted-foreground/50"
-                }`}
+                className={`font-mono-display text-[10px] tracking-wide uppercase ${i <= step ? "text-primary" : "text-muted-foreground/50"
+                  }`}
               >
                 {s.label}
               </span>
@@ -56,7 +54,7 @@ export function StepShell({ step, kicker, title, subtitle, children, wide = true
           </div>
         </header>
 
-        <main className="animate-step-in flex-1" key={step}>
+        <main className="animate-step-in flex-1 mt-[5vh]" key={step}>
           {kicker && (
             <p className="mb-2 flex items-center justify-start gap-2 font-mono-display text-xs tracking-widest text-muted-foreground uppercase">
               <span className="animate-pulse-dot inline-flex h-1.5 w-1.5 justify-start rounded-full bg-primary" />
@@ -65,7 +63,7 @@ export function StepShell({ step, kicker, title, subtitle, children, wide = true
           )}
           <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{title}</h1>
           {subtitle && <p className="mt-3 text-base text-muted-foreground">{subtitle}</p>}
-          <div className="mt-8">{children}</div>
+          <div className="mt-20">{children}</div>
         </main>
 
         <footer className="mt-10 border-t border-border pt-4">

@@ -48,7 +48,9 @@ function Experiencia() {
       step={1}
       kicker="Mapa de la suite"
       title={`Hola ${state.participant.nombre} — repasemos la Suite`}
-      subtitle="Una sola plataforma: todo nace y se administra desde el Control Center. Abrí cada familia, repasá sus productos y contanos cuánto recordás."
+      subtitle="Una sola plataforma: todo nace y se administra desde el Control Center. <br>
+      
+      Abrí cada familia, repasá sus productos y contanos cuánto recordás."
       wide
     >
       <div className="space-y-4">
@@ -67,11 +69,10 @@ function Experiencia() {
           type="button"
           disabled={!allAnswered}
           onClick={() => navigate({ to: "/quiz" })}
-          className={`w-full rounded-xl px-6 py-3.5 font-semibold transition-all duration-150 ${
-            allAnswered
+          className={`w-full rounded-xl px-6 py-3.5 font-semibold transition-all duration-150 ${allAnswered
               ? "glow-primary bg-primary text-primary-foreground hover:scale-[1.01] active:scale-[0.99]"
               : "cursor-not-allowed bg-muted text-muted-foreground"
-          }`}
+            }`}
         >
           {allAnswered
             ? "Ir al mini-quiz →"

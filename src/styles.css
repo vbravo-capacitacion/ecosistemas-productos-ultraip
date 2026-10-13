@@ -77,7 +77,7 @@
   --secondary: oklch(0.26 0.03 255);
   --secondary-foreground: oklch(0.92 0.01 250);
   --muted: oklch(0.24 0.025 255);
-  --muted-foreground: oklch(0.68 0.02 250);
+  --muted-foreground: #e5e7eb;
   --accent: oklch(0.3 0.05 195);
   --accent-foreground: oklch(0.95 0.01 250);
   --destructive: oklch(0.65 0.2 25);
@@ -131,7 +131,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width='90' height='8' viewBox='0 0 90 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4 Q5 0 10 4 T20 4 T30 4 T40 4 T50 4 T60 4 T70 4 T80 4 T90 4' fill='none' stroke='%234b7cf3' stroke-width='2'/%3E%3C/svg%3E");
     background-position: left bottom;
     background-repeat: repeat-x;
-    background-size: 90px 8px;
+    background-size: 90px 69px;
     padding-bottom: 0.13em;
   }
 }

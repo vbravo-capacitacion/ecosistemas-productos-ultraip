@@ -4,7 +4,7 @@ export interface Product {
   id: string;
   name: string;
   tagline: string;
-  detail: string;
+  /*  detail: string; */
 }
 
 export interface Family {
@@ -26,15 +26,15 @@ export const FAMILIES: Family[] = [
         id: "control-center",
         name: "Control Center",
         tagline: "El núcleo del sistema (VMS)",
-        detail:
-          "El sistema operativo del centro de monitoreo: donde se visualizan y operan las cámaras en vivo. Todo nace y se administra desde acá.",
+        /*   detail:
+            "El sistema operativo del centro de monitoreo: donde se visualizan y operan las cámaras en vivo. Todo nace y se administra desde acá.", */
       },
       {
         id: "biblioteca-digital",
         name: "Biblioteca Digital",
         tagline: "Evidencia legal en la nube",
-        detail:
-          "El cofre legal y auditable donde la evidencia se preserva con trazabilidad. Estados: Descargado, Pre-aprobado, Aprobado, Denegado, Finalizado, Vencido.",
+        /*   detail:
+            "El cofre legal y auditable donde la evidencia se preserva con trazabilidad. Estados: Descargado, Pre-aprobado, Aprobado, Denegado, Finalizado, Vencido." ,*/
       },
     ],
   },
@@ -48,8 +48,8 @@ export const FAMILIES: Family[] = [
         id: "configurator",
         name: "Configurator",
         tagline: "Usuarios y permisos",
-        detail:
-          "Panel maestro de configuración, de uso principalmente interno: alta y baja de operadores, qué ve y controla cada perfil, y trazabilidad (quién, qué y cuándo).",
+        /*  detail:
+           "Panel maestro de configuración, de uso principalmente interno: alta y baja de operadores, qué ve y controla cada perfil, y trazabilidad (quién, qué y cuándo).", */
       },
     ],
   },
@@ -63,22 +63,22 @@ export const FAMILIES: Family[] = [
         id: "central-alarmas",
         name: "Central de Alarmas y Monitoreo",
         tagline: "Lectura de patentes ANPR / ALPR",
-        detail:
-          "ANPR/ALPR = Reconocimiento Automático de Patentes. Vista web con mapa, lista de patentes y alarmas en tiempo real. Versiones Mobile para operación en calle.",
+        /*  detail:
+           "ANPR/ALPR = Reconocimiento Automático de Patentes. Vista web con mapa, lista de patentes y alarmas en tiempo real. Versiones Mobile para operación en calle.", */
       },
       {
         id: "reconocimiento-facial",
         name: "Reconocimiento Facial",
         tagline: "Identificación biométrica",
-        detail:
-          "Misma familia que ANPR, aplicada a personas: enrolamiento con DNI, listas de búsqueda y alertas en tiempo real con ubicación del evento.",
+        /*  detail:
+           "Misma familia que ANPR, aplicada a personas: enrolamiento con DNI, listas de búsqueda y alertas en tiempo real con ubicación del evento.", */
       },
       {
         id: "tvf",
         name: "TVF — Tránsito Vecinal Frecuente",
         tagline: "Identificación en pasos de frontera",
-        detail:
-          "Identificación de rostro y registro de patentes en pasos fronterizos. TVF Web para administradores y operadores en punto de control; TVF Tablet para operadores en calle (control vehicular, peatonal y logístico).",
+        /*      detail:
+               "Identificación de rostro y registro de patentes en pasos fronterizos. TVF Web para administradores y operadores en punto de control; TVF Tablet para operadores en calle (control vehicular, peatonal y logístico).", */
       },
     ],
   },
@@ -92,19 +92,20 @@ export const FAMILIES: Family[] = [
         id: "analiticas-tiempo-real",
         name: "Analíticas en Tiempo Real",
         tagline: "Alertas en el momento",
-        detail:
-          "Cruce de línea perimetral, merodeo/amontonamiento e incidentes de tránsito (ITS): vehículos detenidos, en contramano o accidentes.",
+        /*    detail:
+             "Cruce de línea perimetral, merodeo/amontonamiento e incidentes de tránsito (ITS): vehículos detenidos, en contramano o accidentes.",*/
       },
       {
         id: "analiticas-forenses",
         name: "Analíticas Forenses",
         tagline: "Búsqueda por atributos",
-        detail:
-          "Búsqueda de eventos pasados por atributos (color, vestimenta, rango horario, tipo) sin mirar horas de grabación.",
+        /* detail:
+          "Búsqueda de eventos pasados por atributos (color, vestimenta, rango horario, tipo) sin mirar horas de grabación.",*/
       },
     ],
   },
 ];
+
 
 export interface QuizQuestion {
   id: string;

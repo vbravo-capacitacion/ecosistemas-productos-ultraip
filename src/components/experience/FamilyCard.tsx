@@ -29,27 +29,29 @@ export function FamilyCard({ family, confidence, onConfidence }: FamilyCardProps
           <p className="mt-0.5 truncate text-sm text-muted-foreground">{family.headline}</p>
         </div>
         <span
-          className={`font-mono-display text-xs text-muted-foreground transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`font-mono-display text-xs text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""
+            }`}
         >
           ▼
         </span>
       </button>
 
       {open && (
-        <div className="animate-step-in space-y-4 border-t border-border p-5">
-          {family.products.map((p) => (
-            <article key={p.id} className="rounded-xl bg-secondary/50 p-4">
-              <div className="flex flex-wrap items-baseline gap-x-3">
-                <h4 className="font-semibold text-card-foreground">{p.name}</h4>
-                <span className="font-mono-display text-xs" style={{ color: `var(--color-${c})` }}>
-                  {p.tagline}
-                </span>
-              </div>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.detail}</p>
-            </article>
-          ))}
+        <div className="animate-step-in  border-t border-border p-5">
+          <div className="flex gap-5">
+            {family.products.map((p) => (
+              <article key={p.id} className="rounded-xl bg-secondary/50 p-4">
+                <div className="flex flex-wrap items-baseline gap-x-3">
+                  <h4 className="font-semibold text-card-foreground">{p.name}</h4>
+                  <span className="font-mono-display text-xs" style={{ color: `var(--color-${c})` }}>
+                    {p.tagline}
+                  </span>
+                </div>
+                {/* <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.detail}</p> */}
+              </article>
+            ))}
+          </div>
+
 
           <div className="rounded-xl border border-border p-4">
             <p className="mb-3 text-sm font-medium text-card-foreground">
