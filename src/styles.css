@@ -67,7 +67,7 @@
   --background: oklch(0.16 0.02 255);
   --foreground: oklch(0.95 0.01 250);
   --card: oklch(0.2 0.025 255);
-  --card-foreground: oklch(0.95 0.01 250);
+  --card-foreground: #e09d00;
   --popover: oklch(0.22 0.025 255);
   --popover-foreground: oklch(0.95 0.01 250);
   --primary: #20b0ab;
@@ -106,7 +106,10 @@
     font-family: "Archivo", system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: "Space Grotesk", "Archivo", system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
@@ -161,6 +164,7 @@
     opacity: 0;
     transform: translateY(14px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -172,6 +176,7 @@
     transform: scale(0.85);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -179,8 +184,15 @@
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
 }
 
 .animate-pulse-dot {

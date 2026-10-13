@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
-const EYEBROW = "Capacitación Danaide - Ultra IP";
+const EYEBROW = "Capacitaciones Danaide - Ultra IP";
 const TITLE_UNDERLINE = "Tu opinión";
 const TITLE_LEAD = "nos ayuda a mejorar";
 const TITLE_SERIF = "cada capacitación";

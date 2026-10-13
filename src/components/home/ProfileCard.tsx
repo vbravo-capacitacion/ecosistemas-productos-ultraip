@@ -6,11 +6,11 @@ const CARD_DETAILS = [
   { label: "Experiencia", value: "25 años" },
   {
     label: "Objetivo",
-    value: "Software factory de seguridad urbana pública y privada",
+    value: "Brindar soluciones de seguridad urbana pública y privada",
   },
 ] as const;
 
-const CARD_CTA = "Escribinos";
+/* const CARD_CTA = "Escribinos"; */
 const CONTACT_HREF = "/contacto";
 
 export function ProfileCard() {
@@ -29,7 +29,7 @@ export function ProfileCard() {
         conocé Danaide
       </p>
       <p className="absolute -right-2 bottom-6 rotate-[-8deg] font-hand text-2xl text-brand">
-        ¡girala!
+        ¡Gira esta tarjeta!
       </p>
       <div className="absolute left-1/2 top-0 h-24 w-[3px] -translate-x-1/2 bg-ink" aria-hidden />
       <div className="perspective-distant">
@@ -40,9 +40,8 @@ export function ProfileCard() {
           aria-label={isFlipped ? "Girar tarjeta al frente" : "Girar tarjeta para conocer Danaide"}
           onClick={() => setIsFlipped((current) => !current)}
           onKeyDown={flipOnKey}
-          className={`relative h-[390px] w-full cursor-pointer transform-3d rounded-[1.75rem] transition-transform duration-700 motion-reduce:transition-none ${
-            isFlipped ? "rotate-y-180" : "-rotate-[3deg]"
-          } focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand`}
+          className={`relative h-[390px] w-full cursor-pointer transform-3d rounded-[1.75rem] transition-transform duration-700 motion-reduce:transition-none ${isFlipped ? "rotate-y-180" : "-rotate-[3deg]"
+            } focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand`}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-center rounded-[1.75rem] border-[8px] border-white bg-paper p-8 text-center shadow-soft backface-hidden">
             <div className="flex h-full w-full flex-col items-center justify-center rounded-[1.2rem] border border-ink/5">
@@ -71,7 +70,7 @@ export function ProfileCard() {
               onKeyDown={(event) => event.stopPropagation()}
               className="mt-5 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
-              {CARD_CTA}
+              {/*   {CARD_CTA} */}
             </a>
           </div>
         </div>

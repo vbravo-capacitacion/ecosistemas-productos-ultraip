@@ -1,4 +1,7 @@
+
+/* carita sonriente de saludo */
 const AVATAR_LABEL = "Hola";
+
 
 export function FloatingAvatar() {
   return (
