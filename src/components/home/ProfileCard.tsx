@@ -45,9 +45,9 @@ export function ProfileCard() {
         >
           <div className="absolute inset-0 flex flex-col items-center justify-center rounded-[1.75rem] border-[8px] border-white bg-paper p-8 text-center shadow-soft backface-hidden">
             <div className="flex h-full w-full flex-col items-center justify-center rounded-[1.2rem] border border-ink/5">
-              <span className="flex items-center gap-3">
-                <img className="h-10 w-auto" src="./danaide.png" alt="Danaide" />
-                <img className="h-10 w-auto" src="./uip-1.png" alt="UltraIP" />
+              <span className="flex flex-col items-center gap-6">
+                <img className="h-10 w-auto  " src="./danaide.png" alt="Danaide" />
+                <img className="h-8 w-auto" src="./ultra-ip.png" alt="UltraIP" />
               </span>
               <div className="mt-10 flex items-center gap-3">
                 <Sparkles aria-hidden="true" size={18} strokeWidth={1.7} />

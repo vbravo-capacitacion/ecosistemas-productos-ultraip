@@ -15,8 +15,8 @@ export function SiteHeader() {
         className="inline-flex min-h-10 items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
       >
         <span className="flex items-center gap-3" aria-label={BRAND_NAME}>
-          <img className="h-7 w-auto" src="./danaide.png" alt="Danaide" />
-          <img className="h-7 w-auto" src="./uip-1.png" alt="UltraIP" />
+          <img className="h-8 w-auto" src="./danaide.png" alt="Danaide" />
+          <img className="h-6 w-auto" src="./ultra-ip.png" alt="UltraIP" />
         </span>
       </a>
 
