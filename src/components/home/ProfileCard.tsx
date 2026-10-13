@@ -6,7 +6,7 @@ const CARD_DETAILS = [
   { label: "Experiencia", value: "25 años" },
   {
     label: "Objetivo",
-    value: "Construir soluciones de seguridad urgana tanto pública como privada",
+    value: "Construir soluciones de seguridad urbana tanto pública como privada",
   },
 ] as const;
 
