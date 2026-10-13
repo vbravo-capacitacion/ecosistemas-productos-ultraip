@@ -15,7 +15,7 @@ export function Hero({ onSubmit }: HeroProps) {
     <section className="max-w-[780px]">
       <p className="mb-7 text-sm font-medium tracking-wide text-ink/65">{EYEBROW}
         <img className="h-6 w-auto" src="./danaide.png" alt="Danaide" />
-        <img className="h-6 w-auto" src="./uip-1.png" alt="UltraIP" />
+        <img className="h-6 w-auto" src="./ultra-ip.png" alt="UltraIP" />
       </p>
       <h1 className="max-w-[820px] text-[clamp(3.2rem,8vw,7.4rem)] font-semibold leading-[0.95] tracking-[-0.075em]">
         <span className="underline-wave">{TITLE_UNDERLINE}</span> {TITLE_LEAD}{" "}
