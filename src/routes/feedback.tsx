@@ -1,8 +1,11 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { StepShell } from "@/components/layout/StepShell";
 import { ScaleInput } from "@/components/forms/ScaleInput";
 import { useSession } from "@/hooks/use-session";
+import { saveSession } from "@/lib/save-session";
+
+
 
 export const Route = createFileRoute("/feedback")({
   head: () => ({
@@ -30,6 +33,9 @@ function Feedback() {
   const { state, setFeedback, setLastStep } = useSession();
   const { feedback } = state;
 
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+
   useEffect(() => {
     if (!state.participant) navigate({ to: "/", replace: true });
   }, [state.participant, navigate]);
@@ -45,6 +51,19 @@ function Feedback() {
     feedback.utilidad > 0 &&
     feedback.confianzaAplicar > 0 &&
     feedback.nps !== null;
+
+  const submit = async () => {
+    setSaving(true);
+    setError("");
+    try {
+      await saveSession(state);
+      navigate({ to: "/gracias" });
+    } catch {
+      setError("No pudimos guardar tu respuesta. Probá de nuevo.");
+      setSaving(false);
+    }
+  };
+
 
   return (
     <StepShell
@@ -98,11 +117,10 @@ function Feedback() {
                 key={n}
                 type="button"
                 onClick={() => setFeedback({ nps: n })}
-                className={`h-10 w-10 rounded-lg border font-mono-display text-sm font-semibold transition-all duration-150 ${
-                  feedback.nps === n
-                    ? "animate-pop border-primary bg-primary text-primary-foreground glow-primary"
-                    : "border-input bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
-                }`}
+                className={`h-10 w-10 rounded-lg border font-mono-display text-sm font-semibold transition-all duration-150 ${feedback.nps === n
+                  ? "animate-pop border-primary bg-primary text-primary-foreground glow-primary"
+                  : "border-input bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
+                  }`}
               >
                 {n}
               </button>
@@ -129,18 +147,22 @@ function Feedback() {
             className="w-full resize-none rounded-xl border border-input bg-card px-4 py-3 text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-primary"
           />
         </div>
+        {error && (
+          <p role="alert" className="text-red-500 text-sm">{error}</p>
+        )}
 
         <button
           type="button"
-          disabled={!complete}
-          onClick={() => navigate({ to: "/gracias" })}
-          className={`w-full rounded-xl px-6 py-3.5 font-semibold transition-all duration-150 ${
-            complete
-              ? "glow-primary bg-primary text-primary-foreground hover:scale-[1.01] active:scale-[0.99]"
-              : "cursor-not-allowed bg-muted text-muted-foreground"
-          }`}
+          disabled={!complete || saving}
+          onClick={submit}
+          className={`w-full rounded-xl px-6 py-3.5 font-semibold transition-all duration-150 ${complete && !saving
+            ? "glow-primary bg-primary text-primary-foreground hover:scale-[1.01] active:scale-[0.99]"
+            : "cursor-not-allowed bg-muted text-muted-foreground"
+            }`}
         >
-          {complete ? "Enviar y ver mi resumen →" : "Completá las 4 escalas para continuar"}
+          {saving
+            ? "Guardando..."
+            : complete ? "Enviar y ver mi resumen →" : "Completá las 4 escalas para continuar"}
         </button>
       </div>
     </StepShell>
