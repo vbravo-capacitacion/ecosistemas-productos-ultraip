@@ -18,7 +18,7 @@ export function ScaleInput({
   const options = Array.from({ length: max - min + 1 }, (_, i) => min + i);
 
   return (
-    <div>
+    <div className="mx-auto w-full md:w-[45vw]">
       <div className="flex flex-wrap justify-around gap-2">
         {options.map((n) => {
           const active = value === n;
@@ -27,11 +27,10 @@ export function ScaleInput({
               key={n}
               type="button"
               onClick={() => onChange(n)}
-              className={`h-11 w-11 rounded-xl border font-mono-display text-sm font-semibold transition-all duration-150 ${
-                active
+              className={`h-11 w-11 rounded-xl border font-mono-display text-sm font-semibold transition-all duration-150 ${active
                   ? "animate-pop border-primary bg-primary text-primary-foreground glow-primary"
                   : "border-input bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
-              }`}
+                }`}
             >
               {n}
             </button>

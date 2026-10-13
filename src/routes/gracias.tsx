@@ -81,7 +81,7 @@ function Gracias() {
 
         {strong.length > 0 && (
           <div className="rounded-2xl border border-success/40 bg-success/10 p-5">
-            <h3 className="mb-2 font-semibold text-foreground">💪 Familias que dominás</h3>
+            <h3 className="mb-2 font-semibold text-foreground">  Familias que dominás</h3>
             <div className="flex flex-wrap gap-2">
               {strong.map((r) => (
                 <span
@@ -101,7 +101,7 @@ function Gracias() {
 
         {reinforce.length > 0 && (
           <div className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="mb-2 font-semibold text-foreground">📌 Para reforzar</h3>
+            <h3 className="mb-2 font-semibold text-foreground">  Para reforzar</h3>
             <ul className="space-y-2">
               {reinforce.map((r) => (
                 <li key={r.family.id} className="text-sm text-muted-foreground">
