@@ -61,7 +61,7 @@ function Quiz() {
       title={question.question}
       subtitle={!answer ? "Elegí una opción. El feedback es inmediato." : undefined}
     >
-      <div className="space-y-3" key={question.id}>
+      <div className="flex flex-col gap-[30px]" key={question.id}>
         {question.options.map((option, i) => {
           const isCorrect = i === question.correctIndex;
           const isSelected = answer?.selected === i;
@@ -96,11 +96,10 @@ function Quiz() {
       {answer && (
         <div className="animate-step-in mt-6 space-y-5">
           <div
-            className={`rounded-xl border p-4 text-sm leading-relaxed ${
-              answer.correct
+            className={`rounded-xl border p-4 text-sm leading-relaxed ${answer.correct
                 ? "border-success/40 bg-success/10 text-foreground"
                 : "border-destructive/40 bg-destructive/10 text-foreground"
-            }`}
+              }`}
           >
             <strong>{answer.correct ? "¡Correcto! " : "Casi. "}</strong>
             {question.reinforcement}
